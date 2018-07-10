@@ -61,7 +61,7 @@ a{
     text-align: center;
 }
 
-@media screen and (max-device-width: 769px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+@media screen and (max-device-width: 1024px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
   .box{
     width: 1000px;
     height: 600px;
