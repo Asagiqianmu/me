@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=0, minimum-scale=0.5, maximum-scale=0.5">
+    <title>Asagi</title>
+    <link rel="stylesheet" href="css/me.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<div id="bg"></div>
+
+<div class="box">
+    <div class="head_portrait">
+        <img  src="img/asagi.png" alt="head_portrait">
+    </div>
+    <div class="word"><span class="typed"></span></div>
+    <p class="link"><a href="https://www.Asagi.top" target="_blank">BLOG</a></p>
+    <p class="link"><a href="https://www.Asagi.me" target="_blank">ABOUT</a></p>
+    <p class="link"><a href="https://github.com/Asagiqianmu" target="_blank">GITHUB</a></p>
+    <div class="time" id="atime"></div>
+</div>
+<canvas id="canvas"></canvas>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/dots.js"></script>
+<script src="js/main.js"></script>
+<script src="js/typed.js"></script>
+
+<script type="text/javascript">
+    /*var img=[wlop.jpg]*/
+ $(function(){
+    $(".typed").typed({
+        strings: ["My Name is Asagi", "I'm a Web Designer", "Love Simplicity"],
+        typeSpeed: 100,
+        backDelay: 900,
+        // loop
+        loop: true
+    });
+})
+    /* 设置时间 */
+    function show_date_time () { 
+        window.setTimeout("show_date_time()", 1000); 
+        timeold = ((new Date()).getTime()-(new Date("07/9/2018 00:00:00")).getTime());
+
+        sectimeold = timeold/1000;
+        secondsold = Math.floor(sectimeold); 
+        msPerDay = 24*60*60*1000;
+
+        e_daysold = timeold/msPerDay;
+        daysold=Math.floor(e_daysold); 
+
+        e_hrsold=(e_daysold-daysold)*24; 
+        hrsold=Math.floor(e_hrsold); 
+
+        e_minsold=(e_hrsold-hrsold)*60; 
+        minsold=Math.floor((e_hrsold-hrsold)*60); 
+        
+        seconds=Math.floor((e_minsold-minsold)*60); 
+        atime.innerHTML=""+daysold+"D "+hrsold+"H "+minsold+"M "+seconds+"S "; 
+    }
+    show_date_time();
+
+</script>
+
+</body>
+</html>
