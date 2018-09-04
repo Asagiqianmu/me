@@ -48,6 +48,9 @@
 .link{
     margin-top: 20px;
 }
+a:hover{
+    color: #3ca6fd;
+}
 a{
     color: #fff;
     text-decoration: none;
